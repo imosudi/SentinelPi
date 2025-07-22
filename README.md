@@ -7,13 +7,17 @@
 
 **SentinelPi** is a secure, modular, AI-powered home surveillance system for Orange Pi and ARM SBCs. Includes Frigate (YOLOv5/TFLite), MotionEye, Flask UI, MQTT, Telegram alerts, Home Assistant integration, VPN (WireGuard), TLS (DuckDNS), reverse SSH, and full Docker + Ansible automation.
 
----
 
-![SentinelPi Logo](https://raw.githubusercontent.com/imosudi/SentinelPi/main/SentinelPiLogo.jpeg)
 
-![SentinelPi Logo](images/SentinelPiLogo.png)
+![1 SentinelPi Logo](https://raw.githubusercontent.com/imosudi/SentinelPi/main/SentinelPiLogo.jpeg)
 
-![SentinelPi Logo](images/SentinelPiLogo.jpeg)
+![2 SentinelPi Logo](raw.githubusercontent.com/imosudi/SentinelPi/main/images/SentinelPiLogo.jpeg)
+
+![3 SentinelPi Logo](raw.githubusercontent.com/imosudi/SentinelPi/main/images/SentinelPiLogo.png)
+
+![4 SentinelPi Logo](images/SentinelPiLogo.png)
+
+![5 SentinelPi Logo](images/SentinelPiLogo.jpeg)
 
 <img src="images/SentinelPiLogo.jpeg" alt="Sentinel Pi" />
 

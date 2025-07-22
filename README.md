@@ -1,4 +1,3 @@
-
 # 🛰️ SentinelPi
 
 [![CI](https://github.com/imosudi/sentinelpi/actions/workflows/ci.yml/badge.svg)](https://github.com/imosudi/sentinelpi/actions)
@@ -33,4 +32,48 @@ git clone https://github.com/imosudi/sentinelpi.git
 cd sentinelpi
 cp .env.example .env    # Fill in your secrets
 make install            # Or ./install.sh
+
+```
+
+## 📁 Directory Structure
+
+sentinelpi/
+├── .env.example                 # Environment variables
+├── Makefile                    # Common automation tasks
+├── install.sh                  # Full CLI installer
+├── docker-compose.yml          # Core services
+├── flask_ui/                   # Flask overlay app
+│   ├── app.py
+│   ├── Dockerfile
+│   └── templates/
+├── telegram_bot/               # Bot & alert handler
+│   ├── alert_bot.py
+│   └── alert_bot.service
+├── nginx_tls/                  # HTTPS reverse proxy
+├── ansible/                    # Full deployment automation
+│   ├── inventory
+│   ├── install.yml
+│   └── roles/
+├── home-assistant/             # Lovelace UI + MQTT topics
+├── .github/workflows/ci.yml    # GitHub CI/CD pipeline
+
+
+## 📡 Access Points
+
+| Service         | Default Address                       |
+| --------------- | ------------------------------------- |
+| MotionEye       | `http://<device-ip>:8765`             |
+| Flask UI        | `https://<your-domain>:5000`          |
+| Frigate NVR     | `http://<device-ip>:5001`             |
+| MQTT Broker     | `mqtt://<device-ip>:1883`             |
+| VPN (WireGuard) | Config in `ansible/roles/vpn/files/`  |
+| Reverse SSH     | Enabled via `autossh` systemd service |
+
+## 🛠 Common Tasks
+
+make install      # Run full setup with CLI installer
+make deploy       # Apply Ansible playbook to localhost
+make test         # Lint Docker/Ansible/Python configs
+make clean        # Stop and remove all containers/volumes
+make status       # Check systemd and container status
 

@@ -9,7 +9,7 @@
 
 ---
 
-![SentinelPi Logo](SentinelPiLogo.png)
+![SentinelPiLogo](SentinelPiLogo.jpeg)
 
 ## 🔧 Features
 

@@ -1,3 +1,4 @@
+
 # 🛰️ SentinelPi
 
 [![CI](https://github.com/imosudi/sentinelpi/actions/workflows/ci.yml/badge.svg)](https://github.com/imosudi/sentinelpi/actions)
@@ -44,10 +45,22 @@ sentinelpi/
 ├── Makefile                    # Common automation tasks
 ├── install.sh                  # Full CLI installer
 ├── docker-compose.yml          # Core services
-├── flask_ui/                   # Flask overlay app
-│   ├── app.py
-│   ├── Dockerfile
-│   └── templates/
+flask_ui/
+├── Dockerfile                  # Flask overlay app
+├── app.py
+├── config.py
+├── requirements.txt
+├── templates/
+│   └── index.html
+└── static/
+│   └── styles.css
+├── configs/
+│   ├── motioneye/
+│   └── frigate/
+├── scripts/
+│   ├── ddns-update.sh
+│   ├── usb-modem.sh
+│   └── reverse-ssh.service
 ├── telegram_bot/               # Bot & alert handler
 │   ├── alert_bot.py
 │   └── alert_bot.service
@@ -58,6 +71,13 @@ sentinelpi/
 │   └── roles/
 ├── home-assistant/             # Lovelace UI + MQTT topics
 ├── .github/workflows/ci.yml    # GitHub CI/CD pipeline
+├── storage/
+│   ├── motioneye/
+│   ├── frigate/media/
+│   ├── mosquitto/data/
+│   └── mosquitto/log/
+│   └── recordings/ (mounted)
+└── .env
 
 ```
 

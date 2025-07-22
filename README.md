@@ -1,3 +1,4 @@
+
 # 🛰️ SentinelPi
 
 [![CI](https://github.com/imosudi/sentinelpi/actions/workflows/ci.yml/badge.svg)](https://github.com/imosudi/sentinelpi/actions)
@@ -20,6 +21,8 @@
 - 🔁 Reverse SSH fallback for remote access
 - 📦 Docker + Ansible automation
 - 💾 Optional NAS or USB video storage
+- 🔐 Designed for low-resource edge environments.
+- ⚡️ Tuned for performance, extensibility, and privacy.
 
 ---
 

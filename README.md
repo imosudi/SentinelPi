@@ -1,7 +1,7 @@
 # 🛰️ SentinelPi
 
 [![CI](https://github.com/imosudi/sentinelpi/actions/workflows/ci.yml/badge.svg)](https://github.com/imosudi/sentinelpi/actions)
-[![Docker Hub](https://img.shields.io/docker/pulls/imosudi/flask-ui?label=flask-ui)](https://hub.docker.com/r/yourdockerhub/flask-ui)
+[![Docker Hub](https://img.shields.io/docker/pulls/imosudi/flask-ui?label=flask-ui)](https://hub.docker.com/r/imosudi/flask-ui)
 [![License](https://img.shields.io/github/license/imosudi/sentinelpi)](LICENSE)
 
 **SentinelPi** is a secure, modular, AI-powered home surveillance system for Orange Pi and ARM SBCs. Includes Frigate (YOLOv5/TFLite), MotionEye, Flask UI, MQTT, Telegram alerts, Home Assistant integration, VPN (WireGuard), TLS (DuckDNS), reverse SSH, and full Docker + Ansible automation.

@@ -73,9 +73,12 @@ sentinelpi/
 
 ## 🛠 Common Tasks
 
+```
 make install      # Run full setup with CLI installer
 make deploy       # Apply Ansible playbook to localhost
 make test         # Lint Docker/Ansible/Python configs
 make clean        # Stop and remove all containers/volumes
 make status       # Check systemd and container status
+```
+
 

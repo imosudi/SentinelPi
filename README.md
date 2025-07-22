@@ -9,7 +9,7 @@
 
 ---
 
-![SentinelPi Logo](https://github.com/imosudi/SentinelPi/blob/main/SentinelPiLogo.jpeg)
+![SentinelPi Logo](https://raw.githubusercontent.com/imosudi/SentinelPi/main/SentinelPiLogo.jpeg)
 (SentinelPiLogo.png)
 
 ## 🔧 Features

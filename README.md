@@ -41,7 +41,7 @@ make install            # Or ./install.sh
 
 ```
 sentinelpi/
-├── .env.example                 # Environment variables
+├── .env.example                # Environment variables
 ├── Makefile                    # Common automation tasks
 ├── install.sh                  # Full CLI installer
 ├── docker-compose.yml          # Core services

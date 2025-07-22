@@ -1,0 +1,12 @@
+[Unit]
+Description=Reverse SSH Service
+After=network.target
+
+[Service]
+User=your_username
+ExecStart=/usr/bin/ssh -N -R your_remote_port:localhost:your_local_port your_remote_user@your_remote_host
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SentinelPi - Home Surveillance System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to SentinelPi</h1>
+        <p>Your secure, modular, AI-powered home surveillance system.</p>
+    </header>
+    <main>
+        <section>
+            <h2>Features</h2>
+            <ul>
+                <li>Multi-camera support (USB + RTSP/IP)</li>
+                <li>AI detection with YOLOv5 Nano / TensorFlow Lite</li>
+                <li>Motion detection via MotionEye</li>
+                <li>Custom Flask overlay dashboard</li>
+                <li>MQTT alerts and Telegram notifications</li>
+                <li>Home Assistant integration</li>
+                <li>VPN support with WireGuard</li>
+                <li>Secure access with TLS</li>
+                <li>Full Docker and Ansible automation</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Access Points</h2>
+            <table>
+                <tr>
+                    <th>Service</th>
+                    <th>Default Address</th>
+                </tr>
+                <tr>
+                    <td>MotionEye</td>
+                    <td>http://<device-ip>:8765</td>
+                </tr>
+                <tr>
+                    <td>Flask UI</td>
+                    <td>https://<your-domain>:5000</td>
+                </tr>
+                <tr>
+                    <td>Frigate NVR</td>
+                    <td>http://<device-ip>:5001</td>
+                </tr>
+                <tr>
+                    <td>MQTT Broker</td>
+                    <td>mqtt://<device-ip>:1883</td>
+                </tr>
+                <tr>
+                    <td>VPN (WireGuard)</td>
+                    <td>Config in ansible/roles/vpn/files/</td>
+                </tr>
+                <tr>
+                    <td>Reverse SSH</td>
+                    <td>Enabled via autossh systemd service</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 SentinelPi. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+- hosts: all
+  become: yes
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install required packages
+      apt:
+        name:
+          - python3
+          - python3-pip
+          - docker.io
+          - docker-compose
+          - nginx
+          - wireguard
+        state: present
+
+    - name: Install Python dependencies for Flask UI
+      pip:
+        requirements: "{{ playbook_dir }}/flask_ui/requirements.txt"
+
+    - name: Copy MotionEye configuration files
+      copy:
+        src: "{{ playbook_dir }}/configs/motioneye/"
+        dest: "/etc/motioneye/"
+        owner: motioneye
+        group: motioneye
+        mode: '0644'
+        recurse: yes
+
+    - name: Copy Frigate configuration files
+      copy:
+        src: "{{ playbook_dir }}/configs/frigate/"
+        dest: "/etc/frigate/"
+        owner: frigate
+        group: frigate
+        mode: '0644'
+        recurse: yes
+
+    - name: Start and enable MotionEye service
+      systemd:
+        name: motioneye
+        state: started
+        enabled: yes
+
+    - name: Start and enable Frigate service
+      systemd:
+        name: frigate
+        state: started
+        enabled: yes
+
+    - name: Configure Nginx for Flask UI
+      template:
+        src: nginx_flask_ui.conf.j2
+        dest: /etc/nginx/sites-available/flask_ui
+      notify:
+        - Reload Nginx
+
+    - name: Enable Flask UI site
+      command: nginx -s reload
+
+    - name: Start and enable Nginx service
+      systemd:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: Start and enable WireGuard service
+      systemd:
+        name: wg-quick@wg0
+        state: started
+        enabled: yes
+
+  handlers:
+    - name: Reload Nginx
+      systemd:
+        name: nginx
+        state: reloaded

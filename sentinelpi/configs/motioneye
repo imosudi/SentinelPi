@@ -1,0 +1,49 @@
+# Configuration for MotionEye
+
+# This file contains the configuration settings for the MotionEye service.
+# Adjust the settings according to your camera setup and preferences.
+
+# General settings
+motioneye_server_port = 8765
+motioneye_log_level = debug
+motioneye_enable_motion_detection = true
+
+# Camera settings
+camera_1 = {
+    "name": "Camera 1",
+    "type": "local",
+    "video_device": "/dev/video0",
+    "width": 640,
+    "height": 480,
+    "fps": 15,
+    "motion_detection": true,
+    "record": true,
+    "recording_mode": "motion",
+    "storage_path": "/storage/motioneye/camera1"
+}
+
+camera_2 = {
+    "name": "Camera 2",
+    "type": "rtsp",
+    "rtsp_url": "rtsp://<username>:<password>@<ip_address>:<port>/stream",
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "motion_detection": true,
+    "record": true,
+    "recording_mode": "motion",
+    "storage_path": "/storage/motioneye/camera2"
+}
+
+# Notifications
+telegram_bot_token = "<your_telegram_bot_token>"
+telegram_chat_id = "<your_telegram_chat_id>"
+
+# Storage settings
+storage_path = "/storage/motioneye"
+max_recording_days = 7
+
+# Security settings
+enable_https = true
+ssl_cert_file = "/etc/ssl/certs/your_cert.pem"
+ssl_key_file = "/etc/ssl/private/your_key.pem"

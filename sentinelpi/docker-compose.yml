@@ -1,0 +1,76 @@
+version: '3.8'
+
+services:
+  mqtt:
+    image: eclipse-mosquitto:latest
+    container_name: mqtt
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./storage/mosquitto/data:/mosquitto/data
+      - ./storage/mosquitto/log:/mosquitto/log
+    restart: unless-stopped
+
+  frigate:
+    image: blakeblackshear/frigate:stable
+    container_name: frigate
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./storage/frigate/media:/media
+      - ./configs/frigate:/config
+    restart: unless-stopped
+
+  motioneye:
+    image: ccrisan/motioneye:master
+    container_name: motioneye
+    ports:
+      - "8765:8765"
+    volumes:
+      - ./storage/motioneye:/var/lib/motioneye
+      - ./configs/motioneye:/etc/motioneye
+    restart: unless-stopped
+
+  flask_ui:
+    build:
+      context: ./flask_ui
+      dockerfile: Dockerfile
+    container_name: flask_ui
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mqtt
+      - frigate
+      - motioneye
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx_tls:/etc/nginx/conf.d
+    restart: unless-stopped
+
+  vpn:
+    image: linuxserver/wireguard
+    container_name: vpn
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    volumes:
+      - ./storage/wireguard:/etc/wireguard
+    restart: unless-stopped
+
+networks:
+  default:
+    driver: bridge
+
+volumes:
+  mosquitto_data:
+  mosquitto_log:
+  frigate_media:
+  motioneye_storage:

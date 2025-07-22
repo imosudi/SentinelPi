@@ -1,0 +1,14 @@
+[all:vars]
+ansible_user=your_username
+ansible_ssh_private_key_file=~/.ssh/id_rsa
+
+[home_surveillance]
+orange_pi ansible_host=192.168.1.100
+
+[home_surveillance:vars]
+flask_ui_port=5000
+mqtt_broker=192.168.1.100
+telegram_bot_token=your_telegram_bot_token
+home_assistant_url=http://home_assistant:8123
+wireguard_port=51820
+duckdns_domain=your_domain.duckdns.org

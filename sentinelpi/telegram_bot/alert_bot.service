@@ -1,0 +1,13 @@
+[Unit]
+Description=Telegram Alert Bot for SentinelPi
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/mosud/Documents/dev/SentinelPi/telegram_bot/alert_bot.py
+WorkingDirectory=/home/mosud/Documents/dev/SentinelPi/telegram_bot
+Restart=always
+User=mosud
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

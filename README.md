@@ -13,9 +13,9 @@
 
 ![2 SentinelPi Logo](https://raw.githubusercontent.com/imosudi/SentinelPi/main/images/SentinelPiLogo.jpeg)
 
-![3 SentinelPi Logo](raw.githubusercontent.com/imosudi/SentinelPi/main/images/SentinelPiLogo.png)
+![3 SentinelPi Logo](https://raw.githubusercontent.com/imosudi/SentinelPi/main/images/SentinelPiLogo.jpeg)
 
-![4 SentinelPi Logo](images/SentinelPiLogo.png)
+![4 SentinelPi Logo](images/SentinelPiLogo.jpeg)
 
 ![5 SentinelPi Logo](images/SentinelPiLogo.jpeg)
 

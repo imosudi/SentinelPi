@@ -15,6 +15,8 @@
 
 ![SentinelPi Logo](images/SentinelPiLogo.jpeg)
 
+<img src="images/SentinelPiLogo.jpeg" alt="Sentinel Pi" />
+
 ## 🔧 Features
 
 - 🎥 Multi-camera support (USB + RTSP/IP)

@@ -45,15 +45,15 @@ sentinelpi/
 ├── Makefile                    # Common automation tasks
 ├── install.sh                  # Full CLI installer
 ├── docker-compose.yml          # Core services
-flask_ui/
-├── Dockerfile                  # Flask overlay app
-├── app.py
-├── config.py
-├── requirements.txt
-├── templates/
-│   └── index.html
-└── static/
-│   └── styles.css
+├── flask_ui/
+│   ├── Dockerfile              # Flask overlay app
+│   ├── app.py
+│   ├── config.py
+│   ├── requirements.txt
+│   ├── templates/
+│   │   └── index.html
+│   └── static/
+│       └── styles.css
 ├── configs/
 │   ├── motioneye/
 │   └── frigate/

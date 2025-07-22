@@ -37,6 +37,7 @@ make install            # Or ./install.sh
 
 ## 📁 Directory Structure
 
+```
 sentinelpi/
 ├── .env.example                 # Environment variables
 ├── Makefile                    # Common automation tasks
@@ -57,6 +58,7 @@ sentinelpi/
 ├── home-assistant/             # Lovelace UI + MQTT topics
 ├── .github/workflows/ci.yml    # GitHub CI/CD pipeline
 
+```
 
 ## 📡 Access Points
 

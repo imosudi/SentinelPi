@@ -1,3 +1,4 @@
+![SentinelPi Logo](https://raw.githubusercontent.com/imosudi/SentinelPi/main/images/SentinelPiLogo.jpeg)
 
 # 🛰️ SentinelPi
 
@@ -5,21 +6,9 @@
 [![Docker Hub](https://img.shields.io/docker/pulls/imosudi/flask-ui?label=flask-ui)](https://hub.docker.com/r/imosudi/flask-ui)
 [![License](https://img.shields.io/github/license/imosudi/sentinelpi)](LICENSE)
 
-**SentinelPi** is a secure, modular, AI-powered home surveillance system for Orange Pi and ARM SBCs. Includes Frigate (YOLOv5/TFLite), MotionEye, Flask UI, MQTT, Telegram alerts, Home Assistant integration, VPN (WireGuard), TLS (DuckDNS), reverse SSH, and full Docker + Ansible automation.
+**SentinelPi** is a secure, modular, AI-powered home surveillance system built for Orange Pi and ARM SBCs. It integrates Frigate (YOLOv5/TFLite), MotionEye, MQTT alerts, VPN access, Telegram notifications, Home Assistant, and more—fully automated with Docker and Ansible
 
 
-
-![1 SentinelPi Logo](https://raw.githubusercontent.com/imosudi/SentinelPi/main/images/SentinelPiLogo.jpeg)
-
-![2 SentinelPi Logo](https://raw.githubusercontent.com/imosudi/SentinelPi/main/images/SentinelPiLogo.jpeg)
-
-![3 SentinelPi Logo](https://raw.githubusercontent.com/imosudi/SentinelPi/main/images/SentinelPiLogo.jpeg)
-
-![4 SentinelPi Logo](images/SentinelPiLogo.jpeg)
-
-![5 SentinelPi Logo](images/SentinelPiLogo.jpeg)
-
-<img src="images/SentinelPiLogo.jpeg" alt="Sentinel Pi" />
 
 ## 🔧 Features
 
@@ -94,14 +83,21 @@ sentinelpi/
 
 ## 📡 Access Points
 
-| Service         | Default Address                       |
-| --------------- | ------------------------------------- |
-| MotionEye       | `http://<device-ip>:8765`             |
-| Flask UI        | `https://<your-domain>:5000`          |
-| Frigate NVR     | `http://<device-ip>:5001`             |
-| MQTT Broker     | `mqtt://<device-ip>:1883`             |
-| VPN (WireGuard) | Config in `ansible/roles/vpn/files/`  |
-| Reverse SSH     | Enabled via `autossh` systemd service |
+| Service       | Address                     | Notes             |
+| ------------- | --------------------------- | ----------------- |
+| MotionEye     | `http://<device-ip>:8765`   | Local access only |
+| Flask UI      | `https://<domain>:5000`     | TLS via DuckDNS   |
+| Frigate NVR   | `http://<device-ip>:5001`   | AI-based NVR      |
+| MQTT Broker   | `mqtt://<device-ip>:1883`   | Secure via ACL    |
+| WireGuard VPN | `wg.conf in ansible/roles/` | Manual import     |
+| Reverse SSH   | `autossh.service`           | Uses port `22`    |
+
+
+![Python](https://img.shields.io/badge/python-3.10-blue)
+![Ansible](https://img.shields.io/badge/ansible-2.9-red)
+![Docker](https://img.shields.io/badge/docker-compose-blue)
+![ARM](https://img.shields.io/badge/ARM-Optimised-success)
+
 
 ## 🛠 Common Tasks
 

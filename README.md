@@ -92,12 +92,13 @@ sentinelpi/
 | WireGuard VPN | `wg.conf in ansible/roles/` | Manual import     |
 | Reverse SSH   | `autossh.service`           | Uses port `22`    |
 
-
+```
 ![Python](https://img.shields.io/badge/python-3.10-blue)
 ![Ansible](https://img.shields.io/badge/ansible-2.9-red)
 ![Docker](https://img.shields.io/badge/docker-compose-blue)
 ![ARM](https://img.shields.io/badge/ARM-Optimised-success)
 
+```
 
 ## 🛠 Common Tasks
 

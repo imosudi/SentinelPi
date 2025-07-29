@@ -110,4 +110,14 @@ make clean        # Stop and remove all containers/volumes
 make status       # Check systemd and container status
 ```
 
+## 🧩 Optional Integrations
+- ✅ Telegram bot alerts
+
+- ✅ DuckDNS dynamic IP updates
+
+- ✅ Home Assistant MQTT topics
+
+- ✅ Reverse SSH access
+
+
 
